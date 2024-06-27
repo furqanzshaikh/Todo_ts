@@ -12,7 +12,7 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
     const users = await userSchema.find({});
     res.json({ success: true, message: 'Users fetched successfully', data: users });
   } catch (error) {
-    console.error('Error fetching todos:', error);
+    console.error('Error fetching Users:', error);
     res.status(500).json({ success: false, message: 'Internal Server Error' });
   }
 };
